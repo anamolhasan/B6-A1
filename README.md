@@ -31,6 +31,35 @@ interface Employee extends Person {
 }
 
 ```
+## 2️⃣ Type Alias (type)
+
+**ব্যবহার:**  
+- Primitive, union, tuple, object ইত্যাদি সব ধরনের type define করতে।
+- অনেক বেশি flexible। 
+
+**উদাহরণ:**
+
+```ts
+type Student = {
+  name: string;
+  age: number;
+};
+
+type CollegeStudent = Student & { grade: string };
+
+const student: CollegeStudent = {
+  name: "Bob",
+  age: 20,
+  grade: "A"
+};
+
+// Union Type
+type ID = string | number;
+const myID1: ID = 123;
+const myID2: ID = "ABC123";
+
+
+```
 
 
 # TypeScript keyof Example
