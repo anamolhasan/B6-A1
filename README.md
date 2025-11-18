@@ -1,7 +1,41 @@
-# TypeScript keyof Example
+# TypeScript: Interface vs Type
 
 ## Overview
-এই প্রজেক্টে আমরা TypeScript-এর `keyof` keyword ব্যবহার দেখাবো।  
+TypeScript-এ `interface` এবং `type` অনেকটাই একই কাজ করে, কিন্তু কিছু subtle পার্থক্য আছে।  
+এই README-এ আমরা সহজভাবে তাদের মধ্যে পার্থক্য দেখাবো, উদাহরণসহ।  
+
+---
+
+## 1️⃣ Interface
+
+**ব্যবহার:**  
+- মূলত object structure বা class-এর জন্য type define করতে।  
+- inheritance বা extension করতে পারা যায়।  
+
+**উদাহরণ:**
+
+```ts
+interface Person {
+  name: string;
+  age: number;
+}
+
+const user: Person = {
+  name: "Alice",
+  age: 25
+};
+
+// Interface extend করা
+interface Employee extends Person {
+  salary: number;
+}
+
+```
+
+
+# TypeScript keyof Example
+
+## Overview 
 `keyof` মূলত একটি object type-এর সমস্ত property names কে একটি union type হিসেবে বের করতে ব্যবহার করা হয়। এটি type-safe code লিখতে সাহায্য করে, বিশেষ করে generic functions এবং dynamic property access-এর ক্ষেত্রে।  
 
 ---
